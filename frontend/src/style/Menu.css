@@ -1,0 +1,57 @@
+:root {
+  --black: #222222;
+  --red: #D00000;
+}
+
+nav {
+  background-color: var(--red);
+  color: white;
+  display: flex;
+  min-height: 6vh;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.Navbar-Left {
+  background-color: var(--red);
+}
+
+button {
+  min-height: 6vh;
+  width: 250px;
+  font-size: 18px;
+  font-weight: 800;
+  background-color: var(--black);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: #333030;
+}
+
+img {
+  width: 40px;
+}
+
+.space {
+  min-width: 10%;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 30px solid var(--black);
+}
+
+.btn-produtos {
+  background-color: var(--red);
+}
+
+.btn-produtos:hover {
+  background-color: #9e0202;
+}
+
+.Navbar-Right {
+  background-color: var(--red);
+  display: flex;
+}

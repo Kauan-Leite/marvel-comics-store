@@ -3,10 +3,12 @@ import axios from 'axios'
 
 export const getData = async () => {
   const timestamp = Number(new Date())
-  const publicKey = 'c9702c93cb3e64bc039420f52b089b2a'
-  const privateKey = '59260ac2f0f6e8cc7752312eead030713f42aff8'
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY
+  const privateKey = process.env.REACT_APP_PRIVATE_KEY
 
   const hash = md5(timestamp + privateKey + publicKey)
+
+  console.log(process.env)
 
   const url = `https://gateway.marvel.com:443/v1/public/comics?ts=${timestamp}&apikey=${publicKey}&hash=${hash}`
 

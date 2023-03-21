@@ -1,0 +1,19 @@
+:root {
+  --black: #222;
+  --red: #D00000;
+}
+
+.product-card {
+  color: white;
+  border-radius: 8px;
+  max-width: 345px;
+  min-height: 532px;
+  background-color: var(--black);
+}
+
+.add-to-cart {
+  background-color: var(--red);
+  border-radius: 8px;
+  max-width: 146px;
+  text-align: center;
+}

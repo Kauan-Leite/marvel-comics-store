@@ -1,5 +1,5 @@
 :root {
-  --black: #222222;
+  --black: #222;
   --red: #D00000;
 }
 
@@ -12,7 +12,7 @@ nav {
   justify-content: space-between;
 }
 
-.Navbar-Left {
+.navbar-left {
   background-color: var(--red);
 }
 
@@ -51,7 +51,7 @@ img {
   background-color: #9e0202;
 }
 
-.Navbar-Right {
+.navbar-right {
   background-color: var(--red);
   display: flex;
 }

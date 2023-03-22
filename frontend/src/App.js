@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react'
-import { getData } from './api/API'
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 import './App.css'
-import Menu from './components/Menu'
-import Products from './components/Products'
+import Home from './pages/Home'
 
 function App () {
-  useEffect(() => {
-    getData()
-  })
-
   return (
-    <div className="App">
-      <Menu />
-      <Products />
-    </div>
+    <Switch>
+      <Route exact path='/' component={Home} />
+    </Switch>
   )
 }
 

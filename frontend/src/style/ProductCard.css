@@ -6,14 +6,40 @@
 .product-card {
   color: white;
   border-radius: 8px;
-  max-width: 345px;
+  width: 345px;
   min-height: 532px;
   background-color: var(--black);
+  margin: 10px;
+  box-shadow: rgb(0 0 0 / 30%) 0 19px 38px, rgb(0 0 0 / 22%) 0 15px 12px;
 }
 
 .add-to-cart {
   background-color: var(--red);
   border-radius: 8px;
   max-width: 146px;
+  text-align: center;
+}
+
+.thumb {
+  width: 325px;
+  height: 420px;
+  padding: 10px;
+}
+
+.add-to-cart:disabled {
+  background-color: grey;
+  cursor: auto;
+}
+
+.price-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 8px;
+  margin: 10px;
+}
+
+.title {
   text-align: center;
 }

@@ -1,10 +1,8 @@
-import { createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import { composeWithDevTools } from '@redux-devtools/extension'
+import productsReducer from './reducers/productsReducer'
+import thunk from 'redux-thunk'
 
-const INITIAL_STATE = { count: 0 }
-
-const reducer = (state = INITIAL_STATE, action) => state
-
-const store = createStore(reducer, composeWithDevTools())
+const store = createStore(productsReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 export default store

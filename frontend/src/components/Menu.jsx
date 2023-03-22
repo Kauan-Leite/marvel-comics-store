@@ -1,12 +1,15 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import '../style/Menu.css'
 import Cart from '../images/cart.svg'
 import Light from '../images/light.svg'
 // import Dark from '../images/dark.svg'
 
 function Menu () {
+  const history = useHistory()
+
   const products = () => {
-    console.log('products')
+    history.push('/')
   }
 
   const switchMode = () => {
@@ -14,7 +17,7 @@ function Menu () {
   }
 
   const cart = () => {
-    console.log('cart')
+    history.push('/cart')
   }
 
   return (

@@ -1,0 +1,68 @@
+:root {
+  --black: #222;
+  --red: #D00000;
+}
+
+section {
+  display: flex;
+  min-height: 90vh;
+  max-height: 100vh;
+}
+
+.left {
+  min-width: 50%;
+}
+
+.right {
+  width: 30%;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.thumb-details {
+  border-radius: 25px;
+  box-shadow: rgb(0 0 0 / 30%) 0 19px 38px, rgb(0 0 0 / 22%) 0 15px 12px;
+  width: 25vw;
+  height: 75vh;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.title-details {
+  font-size: 42px;
+  margin: 20px;
+}
+
+.subtext {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.authors {
+  margin: 40px;
+}
+
+.authors-name {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.authors-name h1 {
+  width: 50%;
+}
+
+.add-cart-details {
+  width: 80%;
+  background-color: var(--red);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.pcs-details {
+  font-size: 38px;
+}

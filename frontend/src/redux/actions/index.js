@@ -1,4 +1,4 @@
-import { getData } from '../../api/API'
+import { getAllData, getById } from '../../api/API'
 
 export const REQUEST_STARTED = 'REQUEST_STARTED'
 export const REQUEST_SUCCESSFUL = 'REQUEST_SUCCESSFUL'
@@ -24,11 +24,23 @@ function requestFailed (error) {
   }
 }
 
-export function fetchMarvelApi (offset) {
+export function getAllComics (offset) {
   return async (dispatch) => {
     dispatch(requestStarted())
     try {
-      const products = await getData(offset)
+      const products = await getAllData(offset)
+      dispatch(requestSuccessful(products))
+    } catch (error) {
+      dispatch(requestFailed(error))
+    }
+  }
+}
+
+export function getComicsByID (id) {
+  return async (dispatch) => {
+    dispatch(requestStarted())
+    try {
+      const products = await getById(id)
       dispatch(requestSuccessful(products))
     } catch (error) {
       dispatch(requestFailed(error))
@@ -47,13 +59,13 @@ function requestPreviousPage () {
 export function nextPage (offset) {
   return async (dispatch) => {
     dispatch(requestNextPage())
-    dispatch(fetchMarvelApi(offset + 20))
+    dispatch(getAllComics(offset + 20))
   }
 }
 
 export function previousPage (offset) {
   return async (dispatch) => {
     dispatch(requestPreviousPage())
-    dispatch(fetchMarvelApi(offset - 20))
+    dispatch(getAllComics(offset - 20))
   }
 }

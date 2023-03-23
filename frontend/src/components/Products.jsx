@@ -9,26 +9,31 @@ import SkeletonLoading from './SkeletonLoading'
 function Products (props) {
   const { dispatch, products, isFetching, offset, page } = props
   return (
-    <div className='all-products'>
-      { isFetching
-        ? Array.from({ length: 20 }).map((_, index) => (
-          <SkeletonLoading key={index} />
-        ))
-        : products.map((product) => {
-          const { id, title, prices, thumbnail } = product
-          return (
-            <ProductCard
-              key={ id }
-              title={ title }
-              prices={ prices }
-              thumbnail={ thumbnail }
-            />
-          )
-        })
-      }
-            <button disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>Previous Page</button>
-            <h1>Page: {page}</h1>
-            <button onClick={ () => dispatch(nextPage(offset)) }>Next Page</button>
+    <div className='products-page'>
+      <div className='all-products'>
+        { isFetching
+          ? Array.from({ length: 20 }).map((_, index) => (
+            <SkeletonLoading key={index} />
+          ))
+          : products.map((product) => {
+            const { id, title, prices, thumbnail } = product
+            return (
+              <ProductCard
+                key={ id }
+                id={ id }
+                title={ title }
+                prices={ prices }
+                thumbnail={ thumbnail }
+              />
+            )
+          })
+        }
+      </div>
+      <div className='change-page'>
+          <button disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>Previous Page</button>
+          <h1 className='curr-page'>Page: {page}</h1>
+          <button onClick={ () => dispatch(nextPage(offset)) }>Next Page</button>
+      </div>
     </div>
   )
 }

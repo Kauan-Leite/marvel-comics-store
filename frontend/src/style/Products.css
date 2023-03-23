@@ -3,3 +3,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.change-page {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.curr-page {
+  margin: 0 100px;
+}

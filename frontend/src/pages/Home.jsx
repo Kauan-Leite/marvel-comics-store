@@ -6,9 +6,9 @@ import { fetchMarvelApi } from '../redux/actions'
 
 function Home (props) {
   // eslint-disable-next-line react/prop-types
-  const { dispatch } = props
+  const { dispatch, offset } = props
   useEffect(() => {
-    dispatch(fetchMarvelApi())
+    dispatch(fetchMarvelApi(offset))
   }, [])
 
   return (
@@ -21,7 +21,8 @@ function Home (props) {
 
 const mapStateToProps = (state) => ({
   products: state.products,
-  isFetching: state.isFetching
+  isFetching: state.isFetching,
+  offset: state.offset
 })
 
 export default connect(mapStateToProps)(Home)

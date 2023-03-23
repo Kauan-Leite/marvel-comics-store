@@ -27,7 +27,7 @@ function Details (props) {
 }
 
 const mapStateToProps = (state) => ({
-  isFetching: state.isFetching
+  isFetching: state.comicsReducer.isFetching
 })
 
 export default connect(mapStateToProps)(Details)

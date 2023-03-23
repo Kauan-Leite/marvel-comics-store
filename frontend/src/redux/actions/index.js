@@ -69,3 +69,15 @@ export function previousPage (offset) {
     dispatch(getAllComics(offset - 20))
   }
 }
+
+export const ADD_TO_CART = 'ADD_TO_CART'
+
+export function addToCart (item) {
+  return { type: ADD_TO_CART, payload: item }
+}
+
+export const REMOVE_ITEM_CART = 'REMOVE_ITEM_CART'
+
+export function removeItemCart (item) {
+  return { type: REMOVE_ITEM_CART, payload: item }
+}

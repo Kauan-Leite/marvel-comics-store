@@ -7,7 +7,8 @@ import ProductCard from './ProductCard'
 import '../style/components/Products.css'
 
 function Products (props) {
-  const { dispatch, products, isFetching, offset, page } = props
+  const { dispatch, comicsReducer } = props
+  const { products, isFetching, offset, page } = comicsReducer
 
   return (
     <section className='products-page'>
@@ -31,19 +32,16 @@ function Products (props) {
         }
       </section>
       <section className='change-page'>
-          <button disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>Previous Page</button>
+          <button className='prev-page' disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>Previous Page</button>
           <h1 className='curr-page'>Page: {page}</h1>
-          <button onClick={ () => dispatch(nextPage(offset)) }>Next Page</button>
+          <button className='next-page' onClick={ () => dispatch(nextPage(offset)) }>Next Page</button>
       </section>
     </section>
   )
 }
 
 const mapStateToProps = (state) => ({
-  products: state.products,
-  isFetching: state.isFetching,
-  page: state.page,
-  offset: state.offset
+  comicsReducer: state.comicsReducer
 })
 
 export default connect(mapStateToProps)(Products)

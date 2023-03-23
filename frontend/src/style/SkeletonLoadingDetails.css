@@ -1,0 +1,100 @@
+.section-skeleton {
+  display: flex;
+  min-height: 90vh;
+  max-height: 100vh;
+}
+
+.left-skeleton {
+  min-width: 50%;
+}
+
+.right-skeleton {
+  width: 30%;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.img-skeleton {
+  background-color: gray;
+  border-radius: 25px;
+  width: 25vw;
+  height: 75vh;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.title-details-skeleton {
+  background-color: gray;
+  border-radius: 8px;
+  width: 80%;
+  height: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.isbn-skeleton, .num-pages-skeleton, .authores-skeleton,
+.pcs-skeleton {
+  background-color: gray;
+  border-radius: 8px;
+  height: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.isbn-skeleton {
+  margin-top: 40px;
+  width: 40%;
+}
+
+.num-pages-skeleton {
+  margin-top: 10px;
+  width: 40%;
+}
+
+.authores-skeleton {
+  margin-top: 50px;
+  width: 30%;
+}
+
+.pcs-skeleton {
+  margin-top: 80px;
+  width: 20%;
+}
+
+.btn-skeleton {
+  width: 80%;
+  height: 40px;
+  background-color: gray;
+  border-radius: 8px;
+  margin: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, transparent, #D8D8D8, transparent);
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0%{
+    transform: translateX(-100%);
+  }
+
+  100%{
+    transform: translateX(100%);
+  }
+}

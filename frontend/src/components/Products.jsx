@@ -1,19 +1,20 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { connect } from 'react-redux'
-import ProductCard from './ProductCard'
-import '../style/Products.css'
 import { nextPage, previousPage } from '../redux/actions'
-import SkeletonLoading from './SkeletonLoading'
+import SkeletonProducts from './SkeletonProducts'
+import ProductCard from './ProductCard'
+import '../style/components/Products.css'
 
 function Products (props) {
   const { dispatch, products, isFetching, offset, page } = props
+
   return (
-    <div className='products-page'>
-      <div className='all-products'>
+    <section className='products-page'>
+      <section className='all-products'>
         { isFetching
           ? Array.from({ length: 20 }).map((_, index) => (
-            <SkeletonLoading key={index} />
+            <SkeletonProducts key={index} />
           ))
           : products.map((product) => {
             const { id, title, prices, thumbnail } = product
@@ -28,13 +29,13 @@ function Products (props) {
             )
           })
         }
-      </div>
-      <div className='change-page'>
+      </section>
+      <section className='change-page'>
           <button disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>Previous Page</button>
           <h1 className='curr-page'>Page: {page}</h1>
           <button onClick={ () => dispatch(nextPage(offset)) }>Next Page</button>
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 

@@ -9,7 +9,7 @@ const hash = md5(timestamp + privateKey + publicKey)
 
 const baseURL = 'https://gateway.marvel.com:443/v1/public/comics'
 
-export const getAllData = async (offset) => {
+export const getAll = async (offset) => {
   const limit = 20
 
   const url = `${baseURL}?ts=${timestamp}&apikey=${publicKey}&hash=${hash}&limit=${limit}&offset=${offset}`

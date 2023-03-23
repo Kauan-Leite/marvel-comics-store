@@ -1,9 +1,9 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import '../style/Menu.css'
 import Cart from '../images/cart.svg'
 import Light from '../images/light.svg'
 // import Dark from '../images/dark.svg'
+import '../style/components/Menu.css'
 
 function Menu () {
   const history = useHistory()
@@ -22,14 +22,14 @@ function Menu () {
 
   return (
     <nav>
-      <div className='navbar-left'>
+      <article className='navbar-left'>
         <button className='btn-produtos' onClick={ products }>Produtos</button>
-      </div>
-      <div className='navbar-right'>
+      </article>
+      <aside className='navbar-right'>
         <div className='space'/>
         <button onClick={ switchMode }><img src={Light} alt="Light Mode"/></button>
         <button onClick={ cart }><img src={Cart} alt="Carrinho"/></button>
-      </div>
+      </aside>
     </nav>
   )
 }

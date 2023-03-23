@@ -1,7 +1,7 @@
 import React from 'react'
-import '../style/SkeletonLoadingDetails.css'
+import '../style/components/SkeletonDetails.css'
 
-function SkeletonLoadingDetails () {
+function SkeletonDetails () {
   return (
     <section className="section-skeleton">
       <div className='left-skeleton'>
@@ -19,4 +19,4 @@ function SkeletonLoadingDetails () {
   )
 }
 
-export default SkeletonLoadingDetails
+export default SkeletonDetails

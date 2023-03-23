@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { getAllComics } from '../redux/actions'
 import Menu from '../components/Menu'
 import Products from '../components/Products'
-import { getAllComics } from '../redux/actions'
 
 function Home (props) {
   // eslint-disable-next-line react/prop-types
@@ -12,10 +12,10 @@ function Home (props) {
   }, [])
 
   return (
-    <div className="App">
+    <main>
       <Menu />
       <Products />
-    </div>
+    </main>
   )
 }
 

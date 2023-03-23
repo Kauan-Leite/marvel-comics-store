@@ -1,7 +1,7 @@
 import React from 'react'
-import '../style/SkeletonLoading.css'
+import '../style/components/SkeletonProducts.css'
 
-function SkeletonLoading () {
+function SkeletonProducts () {
   return (
     <div className="product-card">
       <div className='thumb-skeleton loading' />
@@ -14,4 +14,4 @@ function SkeletonLoading () {
   )
 }
 
-export default SkeletonLoading
+export default SkeletonProducts

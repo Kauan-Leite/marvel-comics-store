@@ -3,7 +3,7 @@
   --red: #D00000;
 }
 
-section {
+.details-section {
   display: flex;
   min-height: 90vh;
   max-height: 100vh;

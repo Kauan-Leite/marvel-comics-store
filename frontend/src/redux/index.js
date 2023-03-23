@@ -1,8 +1,8 @@
 import { applyMiddleware, createStore } from 'redux'
 import { composeWithDevTools } from '@redux-devtools/extension'
-import productsReducer from './reducers/productsReducer'
+import comicsReducer from './reducers/comicsReducer'
 import thunk from 'redux-thunk'
 
-const store = createStore(productsReducer, composeWithDevTools(applyMiddleware(thunk)))
+const store = createStore(comicsReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 export default store

@@ -8,7 +8,7 @@ const INITIAL_STATE = {
   errorMessage: ''
 }
 
-function productsReducer (state = INITIAL_STATE, action) {
+function comicsReducer (state = INITIAL_STATE, action) {
   switch (action.type) {
     case REQUEST_STARTED:
       return {
@@ -48,4 +48,4 @@ function productsReducer (state = INITIAL_STATE, action) {
   }
 }
 
-export default productsReducer
+export default comicsReducer

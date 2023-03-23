@@ -1,4 +1,4 @@
-import { getAllData, getById } from '../../api/API'
+import { getAll, getById } from '../../API'
 
 export const REQUEST_STARTED = 'REQUEST_STARTED'
 export const REQUEST_SUCCESSFUL = 'REQUEST_SUCCESSFUL'
@@ -28,7 +28,7 @@ export function getAllComics (offset) {
   return async (dispatch) => {
     dispatch(requestStarted())
     try {
-      const products = await getAllData(offset)
+      const products = await getAll(offset)
       dispatch(requestSuccessful(products))
     } catch (error) {
       dispatch(requestFailed(error))

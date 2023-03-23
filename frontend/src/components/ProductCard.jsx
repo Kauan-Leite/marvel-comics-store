@@ -7,10 +7,6 @@ function ProductCard (props) {
   const history = useHistory()
   const { title, prices, thumbnail, id } = props
 
-  const addCart = () => {
-    console.log('addCart')
-  }
-
   const detailsProduct = (id) => {
     history.push(`/details/${id}`)
   }
@@ -22,8 +18,7 @@ function ProductCard (props) {
       {
         prices[0].price !== 0
           ? <article className='price-details'>
-              <h1>R$ {prices[0].price.toFixed(2)}</h1>
-              <button onClick={addCart} className='add-to-cart'>Add To Cart</button>
+              <h1>R$ {prices[0].price.toFixed(2).replace('.',',')}</h1>
             </article>
           : <div className='price-details'>
               <h1 className='out'>Out of Stock</h1>

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import { removeItemCart } from '../redux/actions'
+import Trash from '../images/trash.svg'
 import '../style/components/CartProduct.css'
 
 function CartProduct (props) {
@@ -17,8 +18,8 @@ function CartProduct (props) {
         <tbody>
           <tr>
             <th>Item</th>
-            <th>Title</th>
-            <th>Sub-total</th>
+            <th>Título</th>
+            <th>Preço</th>
             <th>Remover</th>
           </tr>
           { cart.map((item, index) => {
@@ -27,14 +28,17 @@ function CartProduct (props) {
                 <td><h1>{index + 1}</h1></td>
                 <td><h1>{item.title}</h1></td>
                 <td><h1>{item.price}</h1></td>
-                <td><button className='rmv-btn' onClick={() => rmvItemCart(index, item.price)}>Remover</button></td>
+                <td>
+                  <button className='rmv-btn' onClick={() => rmvItemCart(index, item.price)}>
+                    <img src={Trash} alt='remover item do carrinho' />
+                  </button>
+                </td>
               </tr>
             )
           }) }
         </tbody>
       </table>
-      <h1 className='total-price'>Total Price: R${totalPrice.toFixed(2)}</h1>
-      <h1 className='desconto'>Desconto: R${totalPrice.toFixed(2)}</h1>
+      <h1 className='total-price'>Total: R${totalPrice.toFixed(2)}</h1>
     </section>
   )
 }

@@ -38,14 +38,18 @@
   cursor: auto;
 }
 
-.price-details {
+.price, .out {
+  border-radius: 25px;
+  max-width: 10vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
   top: 8px;
-  margin: 18px;
+  margin: auto;
   font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .title {
@@ -53,6 +57,11 @@
   text-align: center;
 }
 
+.price {
+  background-color: darkgreen;
+}
+
 .out {
-  font-style: italic;
+  color: white;
+  background-color: #D00000;
 }

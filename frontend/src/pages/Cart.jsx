@@ -10,7 +10,9 @@ function Cart (props) {
     <section>
       <Menu />
       {
-        cart.length > 0 ? <CartProduct cart={ cart } totalPrice={totalPrice} dispatch={dispatch} /> : 'Sem Produtos no Carrinho'
+        cart.length > 0
+          ? <CartProduct cart={ cart } totalPrice={totalPrice} dispatch={dispatch} />
+          : <h1 className='empty-cart'>Carrinho Vazio!</h1>
       }
     </section>
   )

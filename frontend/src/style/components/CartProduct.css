@@ -12,13 +12,32 @@ table td {
   text-align: center;
 }
 
-.total-price, .desconto {
-  color: white;
+.total-price {
+  display: flex;
+  justify-content: end;
+  margin: 40px 20px;
   font-weight: 800;
-  border-radius: 16px;
-  background-color: #D00000;
-  width: 12%;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+}
+
+.rmv-btn {
+  background-color: var(--red);
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.rmv-btn img {
+  width: 2vw;
+}
+
+.rmv-btn:hover {
+  background-color: #222;
+}
+
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  align-items: center;
+  font-weight: 800;
 }

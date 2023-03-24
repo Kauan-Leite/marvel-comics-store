@@ -40,10 +40,10 @@ function DetailsCard (props) {
               prices[0].price !== 0
                 ? <article>
                     <h1 className='pcs-details'>R$ {prices[0].price.toFixed(2).replace('.',',')}</h1>
-                    <button className='add-cart-details' onClick={ () => addItemCart({id, title, price: prices[0].price})}>Add To Cart</button>
+                    <button className='add-cart-details' onClick={ () => addItemCart({id, title, price: prices[0].price})}>Adicionar ao Carrinho</button>
                   </article>
                 : <article>
-                    <h1 className='out'>Out of Stock</h1>
+                    <h1 className='out'>Sem Estoque</h1>
                   </article>
             }
           </aside>

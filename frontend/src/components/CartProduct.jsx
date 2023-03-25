@@ -32,7 +32,7 @@ function CartProduct (props) {
                   <h1>{item.title}</h1>
                 </td>
                 <td>
-                  <h1>{item.price}</h1>
+                  <h1>{`R$ ${item.price.toFixed(2)}`}</h1>
                 </td>
                 <td>
                   <button className='rmv-btn' onClick={() => rmvItemCart(index, item.price)}>

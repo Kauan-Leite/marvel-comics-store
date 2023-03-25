@@ -63,3 +63,13 @@
   color: white;
   background-color: #D00000;
 }
+
+@media only screen and (max-width: 1000px) {
+  .product-card {
+    width: 100vw;
+  }
+
+  .thumb {
+    width: 90vw;
+  }
+}

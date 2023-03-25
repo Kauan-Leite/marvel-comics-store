@@ -41,3 +41,9 @@ table td {
   align-items: center;
   font-weight: 800;
 }
+
+@media only screen and (max-width: 1000px) {
+  .rmv-btn img {
+    width: 6vw;
+  }
+}

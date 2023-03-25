@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 function Details (props) {
   const { dispatch, isFetching } = props
   const { id } = props.match.params
+  document.title = 'Detalhes | Marvel Comics Store'
 
   useEffect(() => {
     dispatch(getComicsByID(id))

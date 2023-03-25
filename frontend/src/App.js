@@ -6,6 +6,7 @@ import Details from './pages/Details'
 import Home from './pages/Home'
 
 function App () {
+  document.title = 'Marvel Comics Store'
   return (
     <Switch>
       <Route exact path='/' component={Home} />

@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 
 function Home (props) {
   const { dispatch, offset } = props
+  document.title = 'Produtos | Marvel Comics Store'
+
   useEffect(() => {
     dispatch(getAllComics(offset))
   }, [])

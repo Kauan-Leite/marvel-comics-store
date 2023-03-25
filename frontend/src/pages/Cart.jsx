@@ -7,6 +7,8 @@ import PropTypes from 'prop-types';
 
 function Cart (props) {
   const { cart, totalPrice, dispatch } = props
+  document.title = 'Carrinho | Marvel Comics Store'
+
   return (
     <section>
       <Menu />

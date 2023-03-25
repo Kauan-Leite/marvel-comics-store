@@ -64,3 +64,13 @@
     transform: translateX(100%);
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .thumb-skeleton {
+    background-color: gray;
+    border-radius: 8px;
+    width: 90vw;
+    height: 420px;
+    margin: 10px;
+  }
+}

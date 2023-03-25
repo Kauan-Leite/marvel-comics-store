@@ -1,4 +1,4 @@
-# :shield: Marvel Comics Store :shield:
+# :shield: Marvel Comics Store
 
 ## :microscope: Desenvolvimento
 

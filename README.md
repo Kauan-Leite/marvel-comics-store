@@ -9,6 +9,15 @@ Nesse projeto foi desenvolvido o Front-end de uma aplicação de vendas online d
   * Visualização individual do produto
   * Carrinho
 
+<br />
+  
+## :dna: Execução
+
+A aplicação está sendo hospedada pelo Vercel, basta acessar <a href="https://marvel-comics-shop.vercel.app/" target="_blank">Marvel Comics Store</a>.
+
+<br />
+
+
 
 ## :camera: Imagens
 

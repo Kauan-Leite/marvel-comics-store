@@ -8,3 +8,12 @@ Nesse projeto foi desenvolvido o Front-end de uma aplicação de vendas online d
   * Listagem páginada dos produtos
   * Visualização individual do produto
   * Carrinho
+
+
+## :camera: Imagens
+
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/102389576/227746146-b5d83609-9743-4eb3-be96-2192fdd83dd1.png" alt="" width="800px""/></br>
+ <img src="https://user-images.githubusercontent.com/102389576/227746155-e21f9688-a5a1-42c3-b308-55330140194f.png" alt="" width="800px"/></br>
+ <img src="https://user-images.githubusercontent.com/102389576/227746157-67d57684-00cf-4706-96ad-aedb6ce4e8af.png" alt="" width="800px"/>
+</div>

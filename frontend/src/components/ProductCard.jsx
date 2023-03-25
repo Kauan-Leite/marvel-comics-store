@@ -1,14 +1,14 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
-import { useHistory } from 'react-router-dom'
-import '../style/components/ProductCard.css'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import '../style/components/ProductCard.css';
 
 function ProductCard (props) {
-  const history = useHistory()
-  const { title, prices, thumbnail, id } = props
+  const history = useHistory();
+  const { title, prices, thumbnail, id } = props;
 
   const detailsProduct = (id) => {
-    history.push(`/details/${id}`)
+    history.push(`/details/${id}`);
   }
 
   return (
@@ -26,4 +26,11 @@ function ProductCard (props) {
   )
 }
 
-export default ProductCard
+ProductCard.propTypes = {
+  title: PropTypes.string,
+  prices: PropTypes.array,
+  thumbnail: PropTypes.object,
+  id: PropTypes.number,
+};
+
+export default ProductCard;

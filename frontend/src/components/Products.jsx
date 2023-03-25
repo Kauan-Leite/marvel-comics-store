@@ -1,14 +1,16 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
-import { connect } from 'react-redux'
-import { nextPage, previousPage } from '../redux/actions'
-import SkeletonProducts from './SkeletonProducts'
-import ProductCard from './ProductCard'
-import '../style/components/Products.css'
+import React from 'react';
+import { connect } from 'react-redux';
+import { nextPage, previousPage } from '../redux/actions';
+import SkeletonProducts from './SkeletonProducts';
+import ProductCard from './ProductCard';
+import LeftArrow from '../images/arrow-left.svg';
+import RightArrow from '../images/arrow-right.svg';
+import PropTypes from 'prop-types';
+import '../style/components/Products.css';
 
 function Products (props) {
-  const { dispatch, comicsReducer } = props
-  const { products, isFetching, offset, page } = comicsReducer
+  const { dispatch, comicsReducer } = props;
+  const { products, isFetching, offset, page } = comicsReducer;
 
   return (
     <section className='products-page'>
@@ -27,14 +29,18 @@ function Products (props) {
                 prices={ prices }
                 thumbnail={ thumbnail }
               />
-            )
+            );
           })
         }
       </section>
       <section className='change-page'>
-          <button className='prev-page' disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>Previous Page</button>
-          <h1 className='curr-page'>Page: {page}</h1>
-          <button className='next-page' onClick={ () => dispatch(nextPage(offset)) }>Next Page</button>
+          <button className='prev-page' disabled={ offset <= 0} onClick={ () => dispatch(previousPage(offset)) }>
+            <img src={LeftArrow} alt="Página Anterior" />
+          </button>
+          <h1 className='curr-page'>Página: {page}</h1>
+          <button className='next-page' onClick={ () => dispatch(nextPage(offset)) }>
+            <img src={RightArrow} alt="Proxima Página" />
+          </button>
       </section>
     </section>
   )
@@ -42,6 +48,11 @@ function Products (props) {
 
 const mapStateToProps = (state) => ({
   comicsReducer: state.comicsReducer
-})
+});
 
-export default connect(mapStateToProps)(Products)
+Products.propTypes = {
+  dispatch: PropTypes.func,
+  comicsReducer: PropTypes.object,
+};
+
+export default connect(mapStateToProps)(Products);

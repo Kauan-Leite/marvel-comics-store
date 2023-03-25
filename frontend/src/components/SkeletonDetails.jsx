@@ -1,5 +1,5 @@
-import React from 'react'
-import '../style/components/SkeletonDetails.css'
+import React from 'react';
+import '../style/components/SkeletonDetails.css';
 
 function SkeletonDetails () {
   return (
@@ -16,7 +16,7 @@ function SkeletonDetails () {
         <h1 className='btn-skeleton loading'></h1>
       </div>
     </section>
-  )
+  );
 }
 
 export default SkeletonDetails

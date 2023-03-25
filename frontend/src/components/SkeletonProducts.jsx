@@ -1,5 +1,5 @@
-import React from 'react'
-import '../style/components/SkeletonProducts.css'
+import React from 'react';
+import '../style/components/SkeletonProducts.css';
 
 function SkeletonProducts () {
   return (
@@ -10,7 +10,7 @@ function SkeletonProducts () {
         <h1 className='price-skeleton loading'></h1>
       </div>
     </div>
-  )
+  );
 }
 
-export default SkeletonProducts
+export default SkeletonProducts;

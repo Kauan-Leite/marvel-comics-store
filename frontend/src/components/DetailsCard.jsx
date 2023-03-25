@@ -1,16 +1,16 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom'
-import { connect } from 'react-redux'
-import { addToCart } from '../redux/actions'
-import '../style/components/DetailsCard.css'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addToCart } from '../redux/actions';
+import '../style/components/DetailsCard.css';
 
 function DetailsCard (props) {
-  const { products, dispatch } = props
-  const history = useHistory()
+  const { products, dispatch } = props;
+  const history = useHistory();
 
   const addItemCart = (infos) => {
-    dispatch(addToCart(infos))
-    history.push('/cart')
+    dispatch(addToCart(infos));
+    history.push('/cart');
   }
 
   return (
@@ -21,7 +21,9 @@ function DetailsCard (props) {
             <img className='thumb-details' src={`${thumbnail.path}.${thumbnail.extension}`} alt={`capa do ${title}`}/>
           </article>
           <aside className='right'>
-            <h1 className='title-details'>{title}</h1>
+            <h1 className='title-details'>
+              {title}
+            </h1>
             { isbn.length > 0 ? <h1 className='subtext isbn'>ISBN: {isbn}</h1> : <h1 className='subtext'>ISBN: Desconhecido</h1>}
             { pageCount > 0 ? <h1 className='subtext num-pages'>Número de Páginas: {pageCount}</h1> : <h1 className='subtext'>Número de Páginas: Desconhecido</h1>}
             <article className='authors'>
@@ -48,13 +50,13 @@ function DetailsCard (props) {
             }
           </aside>
         </section>
-      )
+      );
     })
-  )
+  );
 }
 
 const mapStateToProps = (state) => ({
   products: state.comicsReducer.products
-})
+});
 
-export default connect(mapStateToProps)(DetailsCard)
+export default connect(mapStateToProps)(DetailsCard);

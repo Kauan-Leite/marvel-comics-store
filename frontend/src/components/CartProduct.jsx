@@ -1,15 +1,15 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
-import { removeItemCart } from '../redux/actions'
-import Trash from '../images/trash.svg'
-import '../style/components/CartProduct.css'
+import React from 'react';
+import { removeItemCart } from '../redux/actions';
+import Trash from '../images/trash.svg';
+import PropTypes from 'prop-types';
+import '../style/components/CartProduct.css';
 
 function CartProduct (props) {
-  const { cart, totalPrice, dispatch } = props
+  const { cart, totalPrice, dispatch } = props;
 
 
   const rmvItemCart = (index, price) => {
-    dispatch(removeItemCart({index, price}))
+    dispatch(removeItemCart({index, price}));
   }
 
   return (
@@ -25,16 +25,22 @@ function CartProduct (props) {
           { cart.map((item, index) => {
             return (
               <tr key={item.id}>
-                <td><h1>{index + 1}</h1></td>
-                <td><h1>{item.title}</h1></td>
-                <td><h1>{item.price}</h1></td>
+                <td>
+                  <h1>{index + 1}</h1>
+                </td>
+                <td>
+                  <h1>{item.title}</h1>
+                </td>
+                <td>
+                  <h1>{item.price}</h1>
+                </td>
                 <td>
                   <button className='rmv-btn' onClick={() => rmvItemCart(index, item.price)}>
                     <img src={Trash} alt='remover item do carrinho' />
                   </button>
                 </td>
               </tr>
-            )
+            );
           }) }
         </tbody>
       </table>
@@ -42,5 +48,11 @@ function CartProduct (props) {
     </section>
   )
 }
+
+CartProduct.propTypes = {
+  cart: PropTypes.array,
+  totalPrice: PropTypes.number,
+  dispatch: PropTypes.func,
+};
 
 export default CartProduct

@@ -1,7 +1,7 @@
 .all-products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .change-page {
@@ -11,6 +11,34 @@
   margin: 50px 0;
 }
 
+.change-page button {
+  background-color: #e5e5e5;
+  border: none;
+  cursor: pointer;
+}
+
+.change-page button img {
+  width: 4vw;
+}
+
+.change-page button:disabled {
+  background-color: #a0a0a0;
+  border-radius: 18px;
+}
+
 .curr-page {
   margin: 0 100px;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 1000px) {
+  .change-page button img {
+    width: 10vw;
+  }
+
+  .all-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

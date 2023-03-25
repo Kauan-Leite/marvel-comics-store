@@ -40,16 +40,14 @@
 
 .price, .out {
   border-radius: 25px;
-  max-width: 10vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
   top: 8px;
-  margin: auto;
+  margin: 20px;
   font-size: 22px;
   font-weight: 800;
-  margin-bottom: 20px;
 }
 
 .title {

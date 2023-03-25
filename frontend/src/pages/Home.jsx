@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import { getAllComics } from '../redux/actions'
 import Menu from '../components/Menu'
 import Products from '../components/Products'
+import PropTypes from 'prop-types';
+
 
 function Home (props) {
-  // eslint-disable-next-line react/prop-types
   const { dispatch, offset } = props
   useEffect(() => {
     dispatch(getAllComics(offset))
@@ -24,5 +25,10 @@ const mapStateToProps = (state) => ({
   isFetching: state.isFetching,
   offset: state.offset
 })
+
+Home.propTypes = {
+  dispatch: PropTypes.func,
+  offset: PropTypes.number,
+};
 
 export default connect(mapStateToProps)(Home)

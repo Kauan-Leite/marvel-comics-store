@@ -17,7 +17,7 @@ A aplicação está sendo hospedada pelo Vercel, basta acessar <a href="https://
 
 <br />
 
-Para rodar está aplicação localmente é necessário ter **Git**, **Docker**, **Docker Compose** e **Node.js** instalados em seu computador.
+Caso queira rodar está aplicação localmente é necessário ter **Git**, **Docker**, **Docker Compose** e **Node.js** instalados em seu computador.
 
 ### 1 - Clone o repositório:
 

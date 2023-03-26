@@ -31,8 +31,10 @@ Durante o desenvolvimento do projeto foi utilizada uma API:
 - CSS
 - Cypress
 - Redux
+- Axios
 - Figma
 - Trello
+
 
 <br />
 

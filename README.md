@@ -11,9 +11,27 @@ Nesse projeto foi desenvolvido o Front-end de uma aplicação de vendas online d
 
 <br />
   
-## :dna: Execução
+## :dna: Instalação e Execução
 
 A aplicação está sendo hospedada pelo Vercel, basta acessar <a href="https://marvel-comics-shop.vercel.app/" target="_blank">Marvel Comics Store</a>.
+
+<br />
+
+Para rodar está aplicação localmente é necessário ter **Git**, **Docker**, **Docker Compose** e **Node.js** instalados em seu computador.
+
+### 1 - Clone o repositório:
+
+```
+git clone git@github.com:Kauan-Leite/marvel-comics-store.git
+```
+
+### 2 - No terminal do repositório, rode o comando:
+
+    docker-compose up -d
+
+### 3 - Agora basta acessar a aplicação em:
+
+    http://localhost:3000/
 
 <br />
 

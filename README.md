@@ -51,8 +51,8 @@ Durante o desenvolvimento do projeto foi utilizada uma API:
 - Redux
 - Axios
 - Dotenv
-- <a href="https://www.figma.com/file/cptahv9rv6DYwCEzPjvqan/Marvel-Comics-Store?node-id=0%3A1&t=oishUqHcxFhj4pug-1" target="_blank">Figma</a>
-- <a href="https://trello.com/invite/b/ek83XBRs/ATTIcf246aa379536ea0b6902b69f2993abd80E85E29/marvel-comics-store" target="_blank">Trello</a>
+- Figma
+- Trello
 
 
 
